@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+      <header>
+        <div class="logo">
+          <a href="#">Curriculum Vitae</a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+            <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+            <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+            <li>
+              <a href="#curriculum" onclick="seleccionar()">CURRICULUM</a>
+            </li>
+            <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+            <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+          </ul>
+        </nav>
+        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-banner">
+        <div class="contenedor-img">
+          <img src="img/anonimo.png" alt="" />
+        </div>
+        <h1>Pablo Laura</h1>
+        <h2>Estudiante de 6to año Computación (2023)</h2>
+        <h2>Escuela Tecnica N°35 DE 18 ING. E. LATZINA</h2>
+        <div class="redes">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://github.com/" target="_blank"> <i class="fa-brands fa-github"></i></a>
+          <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+      <div class="contenido-seccion">
+        <h2>Sobre Mí</h2>
+        <p>
+          <span>Hola, soy Pablo Laura.</span> Soy una persona altamente
+          responsable y comprometida en el entorno laboral. Poseo habilidades
+          sólidas para organizar y administrar eficientemente mis tareas, lo que
+          me permite cumplir con los plazos y objetivos establecidos. Además,
+          tengo la capacidad de adaptarme rápidamente a nuevos métodos y
+          tecnologías, lo que me permite mantenerme actualizado en un entorno
+          laboral en constante evolución.
+        </p>
+        <p>
+          Actualmente, tengo planes de cursar la carrera de Licenciatura en
+          Análisis de Sistemas en la Facultad de Ingeniería de la Universidad de
+          Buenos Aires. Esta carrera me proporcionará una base sólida en los
+          fundamentos de la informática y me permitirá adquirir habilidades
+          técnicas avanzadas en programación y desarrollo de software.
+        </p>
+
+        <p>
+          Además de mis estudios, tengo la determinación de encontrar un empleo
+          en el campo tecnológico para poder solventar mis gastos y adquirir
+          experiencia práctica especialmente. Creo firmemente que una
+          combinación de educación académica y experiencia laboral me permitirá
+          crecer profesionalmente y alcanzar mis metas a largo plazo.
+        </p>
+
+        <div class="fila">
+          <!-- datos personales -->
+          <div class="col">
+            <h3>Datos Personales</h3>
+            <ul>
+              <li>
+                <strong>Fecha de nacimiento</strong>
+                19-12-2004
+              </li>
+              <li>
+                <strong>Teléfono</strong>
+                +54 9 11 66086493
+              </li>
+              <li>
+                <strong>Email</strong>
+                pablolaura1912@gmail.com
+              </li>
+              <li>
+                <strong>Dirección</strong>
+                Victor Hugo 311, CABA CP:1407
+              </li>
+            </ul>
+          </div>
+
+          <!-- intereses -->
+          <div class="col">
+            <h3>Intereses</h3>
+            <div class="contenedor-intereses">
+              <div class="interes">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>JUEGOS</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-headphones"></i>
+                <span>MUSICA</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-plane"></i>
+                <span>VIAJAR</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-person-hiking"></i>
+                <span>DEPORTE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+      <div class="contenido-seccion">
+        <h2>Skills</h2>
+        <div class="fila">
+          <!-- Technical Skill -->
+          <div class="col">
+            <h3>Technical Skills</h3>
+            <div class="skill">
+              <span>HTML & CSS</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>80%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Javascript</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>60%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>C++</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>BD (SQL)</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>80%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Visual Basic</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>60%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Python</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Paquete Office (Word, Excel, PowerPoint)</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>80%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Professional Skills -->
+          <div class="col">
+            <h3>Soft Skills</h3>
+            <div class="skill">
+              <span>Comunicación</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>75%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Trabajo en Equipo</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Creatividad</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>80%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Dedicación</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>90%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Organizacion</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>90%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+      <div class="contenido-seccion">
+        <h2>Curriculum</h2>
+        <div class="fila">
+          <div class="col izquierda">
+            <h3>Educación</h3>
+            <div class="item izq">
+              <h4>Título Secundario Tecnico en Computacion</h4>
+              <span class="casa"
+                >Escuela Técnica N°35 DE 18 Ing. E. Latzina <br />Av. Lope De
+                Vega 2150, Monte Castro, C.A.B.A.</span
+              >
+
+              <span class="fecha">Marzo 2018 - Diciembre 2023</span>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+            <div class="item izq">
+              <h4>Curso UTN — Desarrollo Web II</h4>
+              <span class="casa">Constancia de Finalización del Curso </span>
+              <span class="casa">Modalidad Virtual</span>
+              <span class="fecha">Abril 2021 - Noviembre 2021</span>
+
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+            <div class="item izq">
+              <h4>Curso UTN — Desarrollo Web I</h4>
+              <span class="casa">Constancia de Finalización del Curso </span>
+              <span class="casa">Modalidad Virtual</span>
+              <span class="fecha">Abril 2020 - Noviembre 2020</span>
+
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col derecha">
+            <h3>Experiencia de trabajo</h3>
+            <div class="item der">
+              <h4>Vendedor</h4>
+              <span class="casa">Creaciones Pablis</span>
+              <span class="casa">Bogotá 3168, Floresta, C.A.B.A</span>
+
+              <div class="imagen-logo">
+                <a href="https://www.instagram.com/creaciones_pablis" target="_blank"> <img src="img/trabajo1.jpg" alt="" /></a>
+              </div>
+              
+              <span class="fecha">2005 - 2008</span>
+              <p>
+                <b><i>Instagram: creacioens_pablis</i></b>
+                <br>
+                Como vendedor desarrollé funciones de atención al cliente y
+                presentación de productos en el área de ventas de indumentaria.
+                A su vez, asumí la responsabilidad del manejo de caja y registro
+                de transacciones durante mi jornada laboral. Mi enfoque se
+                centró en proporcionar un servicio al cliente de calidad,
+                destacando la importancia de la atención personalizada y la
+                satisfacción del cliente.
+              </p>
+              <p>
+                Además, tuve la responsabilidad de gestionar y actualizar
+                registros de ventas y transacciones utilizando Microsoft Excel.
+                Utilicé esta herramienta para llevar un seguimiento preciso de
+                las ventas, inventario y estadísticas de desempeño.
+              </p>
+              <p>
+                Desempeñé un papel multifacético como vendedor de ropa,
+                incluyendo la creación de contenido para publicar artículos de
+                moda en nuestras redes sociales. Utilicé mi creatividad y
+                conocimiento de las tendencias para presentar nuestros productos
+                de manera atractiva, generando interés y participación por parte
+                de los seguidores de la marca.
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+      <div class="contenido-seccion">
+        <h2>PORTFOLIO</h2>
+        <div class="galeria">
+          <div class="proyecto" >
+            <a href="https://github.com/Pablis-246/Bloc-Notas" target="_blank">         
+                <img src="img/proyecto1.jpg" alt="" />
+                <div class="overlay">
+                <h3><i>Bloc de Notas</i></h3>
+                <p class="descripcion">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Similique, qui neque. Dolorum ipsam maiores, natus obcaecati
+                    rerum iure voluptate possimus eius non, vel quibusdam impedit
+                    incidunt placeat hic praesentium eligendi!
+                </p>
+                </div>
+            </a>
+          </div>
+          <div class="proyecto">
+            <a href="https://github.com/Pablis-246/APES" target="_blank">
+                <img src="img/proyecto2.jpg" alt="" />
+                <div class="overlay">
+                <h3><i>APES</i></h3>
+                <p class="descripcion">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Similique, qui neque. Dolorum ipsam maiores, natus obcaecati
+                    rerum iure voluptate possimus eius non, vel quibusdam impedit
+                    incidunt placeat hic praesentium eligendi!
+                </p>
+                </div>
+            </a>   
+                
+          </div>
+          <div class="proyecto">
+            <a href="https://github.com/Pablis-246" target="_blank">
+                <img src="img/proyecto3.jpg" alt="" />
+                <div class="overlay">
+                <h3><i>OTROS</i></h3>
+                <p class="descripcion">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Similique, qui neque. Dolorum ipsam maiores, natus obcaecati
+                    rerum iure voluptate possimus eius non, vel quibusdam impedit
+                    incidunt placeat hic praesentium eligendi!
+                </p>
+                </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+      <div class="contenido-seccion">
+        <h2>CONTACTO</h2>
+        <div class="fila">
+          <!-- Formulario -->
+
+          <form class="col">
+            <input type="text" placeholder="Nombre y apellido" />
+            <input type="text" placeholder="Número telefónico" />
+            <input type="text" placeholder="Dirección de correo" />
+            <input type="text" placeholder="Tema" />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Mensaje"
+            ></textarea>
+            <button type="reset">
+              Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+              <span class="overlay"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <a href="#inicio" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+      <div class="redes">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      <h3>Copyrigth (C) 2023 Pablo Laura</h3>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
