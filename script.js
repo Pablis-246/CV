@@ -57,3 +57,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Función para desplazarse hacia arriba cuando se hace clic en la flecha
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Mostrar u ocultar la flecha en función de la posición de desplazamiento
+window.addEventListener('scroll', function() {
+    var flecha = document.querySelector('.flecha');
+    if (window.scrollY > 100) { // Puedes ajustar este valor según tu preferencia
+        flecha.classList.add('mostrar');
+    } else {
+        flecha.classList.remove('mostrar');
+    }
+});
