@@ -153,6 +153,21 @@ html{
     padding: 20px 0;
 
 }
+
+.sobremi h3{
+    font-size: 25px;
+    font-family: 'Righteous';
+    padding: 20px 0px 10px 0px;
+
+}
+
+.sobremi h4{
+    font-size: 20px;
+    font-family: 'Righteous';
+    padding: 10px 0px 10px 0px;
+
+}
+
 .sobremi .contenido-seccion p{
     font: 18px;
     line-height: 20px;
