@@ -72,3 +72,237 @@ window.addEventListener('scroll', function() {
         flecha.classList.remove('mostrar');
     }
 });
+
+
+const logoJedi = document.getElementById("logo-jedi");
+const lightsaber = document.querySelector(".lightsaber");
+
+const colors = ["saber-blue", "saber-red"];
+const glow = ["glow-blue", "glow-red"];
+
+let colorIndex = 0;
+
+logoJedi.addEventListener("mouseenter", () => {
+
+    lightsaber.classList.add(colors[colorIndex]);
+
+    logoJedi.classList.add(
+        "active-logo",
+        glow[colorIndex]
+    );
+
+});
+
+logoJedi.addEventListener("mouseleave", () => {
+
+    lightsaber.classList.remove(colors[colorIndex]);
+
+    logoJedi.classList.remove(
+        "active-logo",
+        glow[colorIndex]
+    );
+
+    setTimeout(()=>{
+
+        colorIndex = (colorIndex + 1) % colors.length;
+
+    },500); // mismo tiempo que el transition
+
+});
+
+//BARRA HABILAID BLANDAS
+const swiper = new Swiper('.softSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3, // FUERZA EXACTAMENTE 3 TARJETAS EN PANTALLA
+            spaceBetween: 25,
+        }
+    }
+});
+
+/*==================================================
+CARRUSEL PROYECTOS
+==================================================*/
+
+const slider=document.querySelector(".projects-slider");
+
+const cards=document.querySelectorAll(".project-card");
+
+const next=document.querySelector(".next");
+
+const prev=document.querySelector(".prev");
+
+const dots=document.querySelectorAll(".dot");
+
+let currentPage=0;
+
+let cardsPerPage=window.innerWidth<=992?1:2;
+
+let totalPages=Math.ceil(cards.length/cardsPerPage);
+
+/*==================================================
+IR A PAGINA
+==================================================*/
+
+function goToPage(page){
+
+    cardsPerPage=window.innerWidth<=992?1:2;
+
+    totalPages=Math.ceil(cards.length/cardsPerPage);
+
+    currentPage=page;
+
+    if(currentPage>=totalPages){
+
+        currentPage=0;
+
+    }
+
+    if(currentPage<0){
+
+        currentPage=totalPages-1;
+
+    }
+
+    const cardWidth=cards[0].offsetWidth;
+
+    const gap=25;
+
+    slider.scrollTo({
+
+        left:currentPage*(cardWidth+gap)*cardsPerPage,
+
+        behavior:"smooth"
+
+    });
+
+    dots.forEach(dot=>dot.classList.remove("active"));
+
+    if(dots[currentPage]){
+
+        dots[currentPage].classList.add("active");
+
+    }
+
+}
+
+/*==================================================
+BOTON SIGUIENTE
+==================================================*/
+
+next.addEventListener("click",()=>{
+
+    goToPage(currentPage+1);
+
+});
+
+/*==================================================
+BOTON ANTERIOR
+==================================================*/
+
+prev.addEventListener("click",()=>{
+
+    goToPage(currentPage-1);
+
+});
+
+/*==================================================
+CLICK EN LOS PUNTOS
+==================================================*/
+
+dots.forEach((dot,index)=>{
+
+    dot.addEventListener("click",()=>{
+
+        goToPage(index);
+
+    });
+
+});
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+window.addEventListener("resize",()=>{
+
+    goToPage(currentPage);
+
+});
+
+/*==================================================
+INICIO
+==================================================*/
+
+goToPage(0);
+
+/*==================================================
+MENSAJE ENVIADO CON
+==================================================*/
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    const toastAlert = document.getElementById('toast-alert');
+
+    if (contactForm && toastAlert) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evita que la página se recargue inmediatamente
+
+            // 1. Mostrar la alerta deslizando desde la derecha
+            toastAlert.classList.add('show');
+
+            // 2. Limpiar los campos del formulario (opcional)
+            contactForm.reset();
+
+            // 3. Ocultar la alerta automáticamente después de 3.5 segundos
+            setTimeout(() => {
+                toastAlert.classList.remove('show');
+            }, 3500);
+        });
+    }
+});
+
+/*==================================================
+CONOCIMEINTOS ADQUIIRODS ACOORDEON
+==================================================*/
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionHeaders = document.querySelectorAll('.knowledge-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const card = header.parentElement;
+            const body = card.querySelector('.knowledge-body');
+
+            // Alternar la clase 'active'
+            const isActive = card.classList.contains('active');
+
+            // Opcional: Cerrar las demás tarjetas si se abre una nueva
+            document.querySelectorAll('.knowledge-card').forEach(otherCard => {
+                otherCard.classList.remove('active');
+                otherCard.querySelector('.knowledge-body').style.maxHeight = null;
+            });
+
+            if (!isActive) {
+                card.classList.add('active');
+                // Asigna la altura exacta del contenido
+                body.style.maxHeight = body.scrollHeight + "px";
+            }
+        });
+    });
+});

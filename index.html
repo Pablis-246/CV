@@ -1,503 +1,1714 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+
+    <!-- ============================= -->
+    <!-- CONFIGURACIÓN GENERAL -->
+    <!-- ============================= -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfolio Web de Pedro Alonso - Estudiante de Licenciatura en Sistemas | Desarrollo Web | Programación | SQL | Python">
+
+    <meta name="keywords"
+          content="Portfolio, HTML, CSS, JavaScript, SQL, Python, Programador, Sistemas, UBA">
+
+    <meta name="author"
+          content="Pedro Alonso">
+
+    <meta name="theme-color"
+          content="#4F46E5">
+
+    <title>Pablo Laura | Portfolio</title>
+
+    <!-- ============================= -->
+    <!-- FAVICON -->
+    <!-- ============================= -->
+
+    <link rel="icon" href="assets/img/favicon.png">
+
+    <!-- ============================= -->
+    <!-- GOOGLE FONTS -->
+    <!-- ============================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- ============================= -->
+    <!-- ICONOS -->
+    <!-- ============================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- ============================= -->
+    <!-- CSS -->
+    <!-- ============================= -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+          <!-- Swiper CSS -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+</head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<body>
 
-    
-    <title>CV Pablo Laura</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <h1 id="inicio">posicion inicio</h1>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-      <header>
-        <div class="logo">
-          <h1 href="#">Curriculum Vitae</h1>
-        </div>
-        <nav id="nav">
-          <ul>
-            <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-            <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-            <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-            <li>
-              <a href="#curriculum" onclick="seleccionar()">CURRICULUM</a>
-            </li>
-            <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
-          </ul>
+<!--==================================================-->
+<!-- HEADER -->
+<!--==================================================-->
+<header class="header">
+    <div class="container nav">
+        <a class="logo" id="logo-jedi">
+            <!-- Tu Nombre -->
+            <span class="logo-text">Pablo Laura</span>
+            <!-- Sable de luz al costado -->
+            <div class="lightsaber">
+                <div class="saber-blade" id="saber-blade"></div>
+                <div class="saber-handle"></div>
+            </div>       
+        </a>
+        
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Tecnologías</a></li>
+                <li><a href="#education">Educación</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
         </nav>
-        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-          <i class="fa-solid fa-bars"></i>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+
+<!--==================================================-->
+<!-- HERO -->
+<!--==================================================-->
+<section class="hero"id="home">
+    <div class="container hero-container">
+        <div class="hero-text">
+            <span class="hero-subtitle">👋 Hola, como estas? Soy . . . .</span>
+            <h1>Pablo Laura</h1>
+            <h2>
+                <span id="typed-text">
+                    Estudiante de Licenciatura en Sistemas
+                </span>
+            </h2>
+            <p>
+                Apasionado por el desarrollo web, la programación y
+                las bases de datos.
+                Actualmente estudio la Licenciatura en Sistemas
+                mientras continúo capacitándome en HTML, CSS,
+                JavaScript, SQL, Python y herramientas modernas.
+            </p>
+
+            <!--========================-->
+            <!-- BOTONES -->
+            <!--========================-->
+            <div class="hero-buttons">
+                <a href="assets/pdf/CvPabloLaura2026.pdf"
+                   class="btn btn-primary" download>
+                    <i class="fa-solid fa-download"></i>
+                    Descargar CV
+                </a>
+                <a href="#contact"class="btn btn-secondary">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contactarme
+                </a>
+            </div>
+
+            <!--========================-->
+            <!-- REDES -->
+            <!--========================-->
+
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/pablo-agustin-laura-calle-2279b8401/" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="https://github.com/Pablis-246" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.instagram.com/pablis_246/" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://www.discord.com/channels/@me/729477342266654750" target="_blank" rel="noopener">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+
         </div>
-      </header>
+
+        <!--========================-->
+        <!-- FOTO -->
+        <!--========================-->
+
+        <div class="hero-image">
+
+            <img src="assets/img/perfil.jpeg"alt="">
+
+        </div>
+
     </div>
 
-    <!-- SECCION INICIO -->
-    <div  class="inicio">
-      <div class="contenido-banner">
-        <div class="contenedor-img">
-          <img src="img/perfil.jpg" alt="" />
+</section>
+
+
+<!--==================================================-->
+<!-- A PARTIR DE AQUÍ CONTINÚA LA PARTE 2 -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- SOBRE MI -->
+<!--==================================================-->
+
+<section class="about section" id="about">
+
+    <div class="container">
+
+        <!-- TITULO -->
+
+        <div class="section-title">
+            <h2>Sobre mí</h2>
         </div>
-        <h1>Pablo Laura</h1>
-        <h2>Egresado Técnico en Computación (2023)</h2>
-        <h2>Escuela Tecnica N°35 DE 18 ING. E. LATZINA</h2>
-        <div class="redes">
-          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a>
-          <a href="https://github.com/Pablis-246" target="_blank"> <i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/pablo-agustin-laura-calle-2279b8401/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+
+        <div class="about-container">
+            <!--==================================-->
+            <!-- INFORMACION -->
+            <!--==================================-->
+
+            <div class="about-content">
+                <p>
+                    Actualmente soy estudiante de la carrera
+
+                    <strong>Licenciatura en Analisis de Sistemas</strong>
+
+                    en la Universidad de Buenos Aires (FIUBA). Me encuentro cursando el 3er año de la carrera. Ya hice el cbc y curse materias como Algebra II, Analisis Matematico II, Algoritmos y Programacion I y II, entre otras
+
+                </p>
+                
+
+                <p>
+                    Me considero alguien con un <strong> perfil responsable</strong> ,
+                    organizado y con gran disposición para el aprendizaje. Me
+                    caracterizo por mi rapidez para adquirir nuevos conocimientos
+                    y por mi buena adaptación a distintos entornos de trabajo,
+                    especialmente cuando recibo capacitación para desempeñar
+                    nuevas tareas.
+                </p>
+
+                <p>
+                    Además de mis estudios, tengo la determinación de <strong >encontrar un empleo en el campo tecnológico </strong> para poder solventar mis gastos y adquirir experiencia práctica especialmente. Creo firmemente que una combinación de educación académica y experiencia laboral me permitirá crecer profesionalmente y alcanzar mis metas a largo plazo.
+                </p>
+
+                <p>
+                    Soy una persona <strong>Autodidacta</strong> que busca aprender nuevas cosas por mi cuenta y cada dia adquirir nuevos conocimientos, me encuentro realizando cursos orientados al ambito IT de talento tech o cursos dictados por el GCBA o tambien cursos dictados por Youtube ya sea de manejo de paquete de microsoft office, desarollo web, excel, base de datos entro otros. 
+
+                </p>
+
+
+
+                <h3>Cosas personales sobre mi</h3>
+                <p>
+                    Soy una persona que a veces le gusta hablar con referencias a peliculas o series. Soy fan de Marvel veo todas las pelicuasl, me agrada en especial Spider Man, me gusta algo de DC como Flash y el Arrowverse; me gusta jugar al FIFA de vez en cuando, fiel seguidor de los juegos antiguos de Lego como Batman, Indiana, Star Wars
+                    Me gusta la musica clasica mas que nada las melodias sin letras. Escucho tambien regueaton de la vieja escuela, cuarteto y algo de lo nuevo de ahora
+                </p>
+                
+                <h3>OBJETIVO PROFESIONAL</h3>
+
+                <p>
+                    Busco incorporarme a un equipo de trabajo en el área
+                    tecnológica donde pueda aportar compromiso, proactividad y
+                    entusiasmo, al mismo tiempo que continúo desarrollando mis
+                    habilidades y adquiriendo experiencia profesional
+                </p>
+
+                <h3>Puestos de trabajo deseados o similares</h3>
+                <p>
+                    Me encuentro interesado en desarrollarme en el área de <strong>Análisis de Datos</strong> . Para ello, estoy formándome de manera autodidacta en herramientas fundamentales como Excel, Python y SQL. En Excel, estoy adquiriendo conocimientos en manejo de datos, funciones, tablas dinámicas y herramientas de análisis, lo que me permite organizar, procesar e interpretar información de manera eficiente. En Python, poseo conocimientos básicos adquiridos tanto en mi formación académica como en cursos online, orientados al análisis y manipulación de datos. En SQL, cuento con una base sólida que continúo reforzando mediante la práctica y el aprendizaje continuo. Me interesa el análisis de datos porque permite transformar información en conocimiento útil para la toma de decisiones, optimizar procesos y detectar oportunidades de mejora en distintos ámbitos.
+                </p>
+
+                <p>
+                    También me interesa desarrollarme en el área de <strong>Soporte Técnico</strong> , ya que me motiva la resolución de problemas, la asistencia a usuarios y el trabajo con sistemas informáticos. Considero que cuento con habilidades como la paciencia, la comunicación y la capacidad de aprendizaje, fundamentales para desempeñarme en este tipo de roles.
+                </p>
+
+
+                <p>
+                    Otros puestos de interés incluyen <strong>tareas administrativas</strong>  relacionadas con control de stock, gestión de inventarios, carga y emisión de facturas, manejo de documentación y uso de herramientas como Excel. Estos roles me resultan atractivos ya que combinan organización, responsabilidad y el uso de herramientas digitales para optimizar procesos dentro de una empresa.
+
+                </p>
+
+            </div>
+
         </div>
-      </div>
+
     </div>
 
-    <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi">
-      <div class="contenido-seccion">
-        <h2>Sobre Mí</h2>
-        <p>
-          <span>Hola, soy Pablo Laura.</span> Soy una persona altamente
-          responsable y comprometida en el entorno laboral. Poseo habilidades
-          sólidas para organizar y administrar eficientemente mis tareas, lo que
-          me permite cumplir con los plazos y objetivos establecidos. Además,
-          tengo la capacidad de adaptarme rápidamente a nuevos métodos y
-          tecnologías, lo que me permite mantenerme actualizado en un entorno
-          laboral en constante evolución.
-        </p>
-        <p>
-         Actualmente(2026) me encuentro cursando el segundo año de la Licenciatura en Análisis de
-         Sistemas en la UBA. Elegí esta carrera por mi interés en la tecnología y la resolución de problemas. Me motiva comprender cómo funcionan los sistemas y aplicar ese conocimiento para desarrollar soluciones eficientes, con el objetivo de crecer profesionalmente en el área IT.
-        </p>
+</section>
 
-        <p>
-          Además de mis estudios, tengo la determinación de encontrar un empleo
-          en el campo tecnológico para poder solventar mis gastos y adquirir
-          experiencia práctica especialmente. Creo firmemente que una
-          combinación de educación académica y experiencia laboral me permitirá
-          crecer profesionalmente y alcanzar mis metas a largo plazo.
-        </p>
 
-        <p>
-          Actualmente me encuentro en la búsqueda de mi primer empleo, con gran motivación por desarrollarme profesionalmente y adquirir experiencia en el ámbito laboral. Me destaco por mi compromiso, responsabilidad y predisposición para aprender continuamente.
-Estoy dispuesto a dar el máximo en cada oportunidad y a adaptarme a distintas modalidades de trabajo, ya sea presencial, remoto o híbrido, según lo requiera la empresa.
-        </p>
+<section class="personal-info section" id="personal-info">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Mis datos personales</h2>
+        </div>
+
+        <div class="profile-grid">
+
+            <div class="profile-item">
+                <i class="fa-solid fa-user"></i>
+                <h3>Nombre</h3>
+                <p>Pablo Agustín Laura Calle</p>
+            </div>
+
+            <div class="profile-item">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>Fecha Nacimiento</h3>
+                <p>19 de Diciembre del 2004</p>
+            </div>
+
+            <div class="profile-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Ubicación</h3>
+                <p>Victor Hugo 311, Villa Luro, CABA, Argentina</p>
+            </div>
+
+            <div class="profile-item">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Teléfono</h3>
+                <p>+54 9 11 6608-6493</p>
+            </div>
+
+            <div class="profile-item">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>
+                <p>pablolauracalle@gmail.com</p>
+            </div>
+
+            <div class="profile-item">
+                <i class="fa-solid fa-id-card"></i>
+                <h3>DNI</h3>
+                <p>46123496</p>
+            </div>
+
         
 
-        <div class="fila">
-          <!-- datos personales -->
-          <div class="col">
-            <h3>Datos Personales</h3>
-            <ul>
-              <li>
-                <strong>Fecha de nacimiento :</strong>
-                19-12-2004
-              </li>
-              <li>
-                <strong>C.U.I.L :</strong>
-                20-46123496-9
-              </li>
-              <li>
-                <strong>Teléfono :</strong>
-                +54 9 11 66086493
-              </li>
-              <li>
-                <strong>Email :</strong>
-                pablolauracalle@gmail.com
-              </li>
-              <li>
-                <strong>Dirección :</strong>
-                Victor Hugo 311, CABA CP:1407
-              </li>
-            </ul>
-          </div>
-
-          <!-- intereses -->
-          <div class="col">
-            <h3>Intereses</h3>
-            <div class="contenedor-intereses">
-              <div class="interes">
-                <i class="fa-solid fa-gamepad"></i>
-                <span>JUEGOS</span>
-              </div>
-              <div class="interes">
-                <i class="fa-solid fa-headphones"></i>
-                <span>MUSICA</span>
-              </div>
-              <div class="interes">
-                <i class="fa-solid fa-plane"></i>
-                <span>VIAJAR</span>
-              </div>
-              <div class="interes">
-                <i class="fa-solid fa-futbol"></i>
-                <span>FUTBOL</span>
-              </div>
-              <div class="interes">
-                <i class="fa-solid fa-person-hiking"></i>
-                <span>CORRER</span>
-              </div>
+            <div class="profile-item">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Carrera</h3>
+                <p>Licenciatura en Sistemas</p>
             </div>
-          </div>
+
+            
+
         </div>
-        <h3>Conocimientos Adquiridos</h3>
 
-        <h4>Escuela Técnica N°35 DE 18</h4>
-        <p>
-        Durante mi formación secundaria adquirí conocimientos en desarrollo web, bases de datos y programación. Aprendí a utilizar HTML y CSS para el diseño de páginas web estáticas, comprendiendo la estructura, estilos y organización de interfaces.
-        Además, incorporé conceptos básicos de programación en lenguajes como JavaScript, C++ y Assembler, lo que me permitió desarrollar el pensamiento lógico y la resolución de problemas.
-        </p>
+    </div>
 
-        <p>
-        En quinto año profundicé en bases de datos, aprendiendo conceptos fundamentales como claves primarias y foráneas, modelado de datos y normalización. También trabajé con SQL, realizando consultas para la manipulación, administración y recuperación de información.
-        Utilizamos Microsoft Visual Studio para desarrollar aplicaciones simples, integrando bases de datos con interfaces funcionales.
-        </p>
+</section>
 
-        <p>
-        Como proyecto integrador, desarrollé junto a un equipo un sistema de control de stock para un local de ropa. En este proyecto aplicamos modelado de base de datos en función de los requerimientos del cliente, incluyendo gestión de productos, control de inventario, emisión de facturas y remitos.
-        Implementamos la aplicación en Visual Studio, conectándola con la base de datos mediante consultas SQL, logrando una integración entre la lógica del sistema y la persistencia de datos. Además, elaboramos una guía de usuario para facilitar la utilización del software.
-        </p>
 
-        <p>
-        En sexto año incorporé conocimientos en Java, abordando desde conceptos básicos hasta Programación Orientada a Objetos (POO), interfaces y manejo de hilos. Trabajé en el entorno de desarrollo Eclipse y utilicé LibGDX, un framework para el desarrollo de videojuegos multiplataforma.
-        </p>
-
-        <p>
-        Como proyecto final, desarrollé junto a un equipo un videojuego multijugador en red. Este proyecto implicó la integración de múltiples tecnologías y herramientas, así como el aprendizaje autónomo para resolver problemas técnicos no vistos en clase.
-        A pesar de las dificultades, logramos completar el proyecto, destacando la capacidad de trabajo en equipo, la perseverancia y la búsqueda de soluciones mediante investigación y aprendizaje continuo.
-        </p>
-
-        <h4>Curso Desarrollo Web I y II (UTN)</h4>
-        <p>
-        Realicé cursos de desarrollo web donde profundicé en HTML, CSS y JavaScript. Durante la cursada desarrollé proyectos de páginas web estáticas, aplicando buenas prácticas de diseño y estructura.
-        Se destacó una metodología de enseñanza dinámica, con participación activa y resolución de ejercicios prácticos que reforzaron los conocimientos adquiridos.
-        </p>
-
-        <h4>Curso Análisis de Datos (Talento Tech)</h4>
-        <p>
-        Actualmente me encuentro cursando un programa cuatrimestral de Análisis de Datos, donde estoy incorporando herramientas y conceptos clave para el procesamiento, análisis e interpretación de datos.
-        </p>
-
-        <h3>Puestos de trabajo deseados o similares (2026)</h3>
-
-        <p>
-        Me encuentro interesado en desarrollarme en el área de Análisis de Datos. Para ello, estoy formándome de manera autodidacta en herramientas fundamentales como Excel, Python y SQL.
-        En Excel, estoy adquiriendo conocimientos en manejo de datos, funciones, tablas dinámicas y herramientas de análisis, lo que me permite organizar, procesar e interpretar información de manera eficiente.
-        En Python, poseo conocimientos básicos adquiridos tanto en mi formación académica como en cursos online, orientados al análisis y manipulación de datos. En SQL, cuento con una base sólida que continúo reforzando mediante la práctica y el aprendizaje continuo.
-        Me interesa el análisis de datos porque permite transformar información en conocimiento útil para la toma de decisiones, optimizar procesos y detectar oportunidades de mejora en distintos ámbitos.
-        </p>
-
-        <p>
-        También me interesa desarrollarme en el área de Soporte Técnico, ya que me motiva la resolución de problemas, la asistencia a usuarios y el trabajo con sistemas informáticos. Considero que cuento con habilidades como la paciencia, la comunicación y la capacidad de aprendizaje, fundamentales para desempeñarme en este tipo de roles.
-        </p>
-
-        <p>
-        Otros puestos de interés incluyen tareas administrativas relacionadas con control de stock, gestión de inventarios, carga y emisión de facturas, manejo de documentación y uso de herramientas como Excel.
-        Estos roles me resultan atractivos ya que combinan organización, responsabilidad y el uso de herramientas digitales para optimizar procesos dentro de una empresa.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- SECCION SKILLS -->
-    <section class="skills" id="skills">
-      <div class="contenido-seccion">
-        <h2>Skills</h2>
-        <div class="fila">
-          <!-- Technical Skill -->
-          <div class="col">
-            <h3>Technical Skills</h3>
-            <div class="skill">
-              <span>HTML & CSS</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>50%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Javascript</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>50%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>C++</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>50%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>BD (SQL)</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>50%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Visual Basic</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>50%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Python</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>50%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Paquete Office (Word, Excel, PowerPoint)</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>80%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Professional Skills -->
-          <div class="col">
-            <h3>Soft Skills</h3>
-            <div class="skill">
-              <span>Comunicación</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>75%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Trabajo en Equipo</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>75%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Creatividad</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>80%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Dedicación</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>90%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Organizacion</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>90%</span>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--==================================================-->
+<!-- TECNOLOGÍAS -->
+<!--==================================================-->
+<section class="skills section" id="skills">
+    <div class="container">
+        <div class="section-title">
+            <span>Mis conocimientos</span>
+            <h2>Tecnologías</h2>
+            <p>
+                Estas son algunas de las tecnologías con las que trabaje en el pasado ya sea en la secundaria o en la facultad
+            </p>
         </div>
-      </div>
-    </section>
 
-    <!-- SECCION CURRICULUM -->
-    <section id="curriculum" class="curriculum">
-      <div class="contenido-seccion">
-        <h2>Curriculum</h2>
-        <div class="fila">
-          <div class="col izquierda">
-            <h3>Educación</h3>
-            <div class="item izq">
-              <h4>Título Secundario Tecnico en Computacion</h4>
-              <span class="casa"
-                >Escuela Técnica N°35 DE 18 Ing. E. Latzina <br />Av. Lope De
-                Vega 2150, Monte Castro, C.A.B.A.</span
-              >       
-              <span class="fecha">Marzo 2018 - Diciembre 2023 (Cursando)</span>
-              <span>
-                <div class="descargarCertificado">
-                  <p>Titulo Analitico Tecnico en Computación</p>
-                  <a href="archivosPDF/Analitico Pablo Laura.pdf" class="boton-descarga" download="Titulo Analitico Tecnico en Computación. LAURA CALLE Pablo Agustín.pdf">
-                      <i class="fas fa-download icono-descarga"></i> Descargar Archivo PDF
-                  </a>
-                </div>              
-              </span>
-              <div class="conectori">
-                <div class="circuloi"></div>
-              </div>
-            </div>
-            <div class="item izq">
-              <h4>Curso UTN — Desarrollo Web II</h4>
-              <span class="casa">Constancia de Finalización del Curso </span>
-              <span class="casa">Modalidad Virtual</span>
-              <span class="fecha">Abril 2021 - Noviembre 2021</span>
-              <span>
-                <div class="descargarCertificado">
-                  <a href="archivosPDF/Certificado de Desarollo Web II. LAURA  PABLO.pdf" class="boton-descarga" download="Certificado de Desarollo Web II. LAURA  PABLO.pdf">
-                      <i class="fas fa-download icono-descarga"></i> Descargar Archivo PDF
-                  </a>
-                </div>              
-              </span>
-              <div class="conectori">
-                <div class="circuloi"></div>
-              </div>
-            </div>
-            <div class="item izq">
-              <h4>Curso UTN — Desarrollo Web I</h4>
-              <span class="casa">Constancia de Finalización del Curso </span>
-              <span class="casa">Modalidad Virtual</span>
-              <span class="fecha">Abril 2020 - Noviembre 2020</span>
-              <span>
-                <div class="descargarCertificado">
-                  <a href="archivosPDF/Certificado de Desarollo Web I. LAURA  PABLO.pdf" class="boton-descarga" download="Certificado de Desarollo Web I. LAURA  PABLO.pdf">
-                      <i class="fas fa-download icono-descarga"></i> Descargar Archivo PDF
-                  </a>
-                </div>              
-              </span>
-              <div class="conectori">
-                <div class="circuloi"></div>
-              </div>
-            </div>
-          </div>
+        <div class="skills-grid">
+            <!-- HTML -->
+            <div class="skill-card">
+                <div class="skill-icon html">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <h3>HTML5</h3>
+                <p>
+                    Desarrollo de páginas web utilizando etiquetas
+                    semánticas, formularios, tablas, multimedia y buenas
+                    prácticas de accesibilidad.
 
-          <div class="col derecha">
-            <h3>Experiencia de trabajo</h3>
-            <div class="item der">
-              <h4>Vendedor</h4>
-              <span class="casa">Creaciones Pablis</span>
-              <span class="casa">Bogotá 3168, Floresta, C.A.B.A</span>
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
 
-              <span class="fecha"><b>Instagram: creaciones_pablis</b></span>
-              <div class="imagen-logo">
-                <a href="https://www.instagram.com/creaciones_pablis" target="_blank"> <img src="img/trabajo1.jpg" alt="" /></a>
-              </div>
-              
-              <span class="fecha">Abril 2020 - 2023</span>
-              <p>
+            <!-- CSS -->
+            <div class="skill-card">
+                <div class="skill-icon css">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <h3>CSS3</h3>
+                <p>
+                    Diseño responsive utilizando Flexbox, Grid,
+                    animaciones, transiciones y diseño adaptable para
+                    distintos dispositivos.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-card">
+                <div class="skill-icon js">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>
+
+                    Desarrollo de aplicaciones dinámicas,
+                    manipulación del DOM, eventos y lógica
+                    del lado del cliente.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+
+            </div>
+
+            <!-- Python -->
+            <div class="skill-card">
+                <div class="skill-icon python">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                <h3>Python</h3>
+                <p>
+                    Automatización de tareas,
+                    estructuras de datos,
+                    programación básica y resolución
+                    de problemas.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- Java -->
+            <div class="skill-card">
+                <div class="skill-icon java">
+                    <i class="fa-brands fa-java"></i>
+                </div>
+                <h3>Java</h3>
+                <p>
+                    Desarrollo de aplicaciones mediante programación
+                    orientada a objetos, utilizando clases, objetos,
+                    herencia, encapsulamiento y colecciones.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- SQL -->
+            <div class="skill-card">
+                <div class="skill-icon sql">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3>SQL</h3>
+                <p>
+                    Consultas SQL,
+                    modelado de bases de datos,
+                    relaciones, claves primarias,
+                    claves foráneas y normalización.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- C -->
+            <div class="skill-card">
+                <div class="skill-icon c">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Lenguaje C</h3>
+                <p>
+                    Programación estructurada,
+                    funciones,
+                    punteros,
+                    archivos y memoria dinámica.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- Visual Basic -->
+            <div class="skill-card">
+                <div class="skill-icon vb">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3>Visual Basic</h3>
+                <p>
+                    Desarrollo de aplicaciones
+                    de escritorio,
+                    formularios y conexión
+                    con bases de datos.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- Visual Studio Code -->
+            <div class="skill-card">
+                <div class="skill-icon vscode">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Visual Studio Code</h3>
+                <p>
+                    Entorno de desarrollo utilizado para proyectos
+                    web y de programación, con integración de
+                    extensiones, depuración y control de versiones.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- Microsoft Office -->
+            <div class="skill-card">
+                <div class="skill-icon office">
+                    <i class="fa-solid fa-file-word"></i>
+
+                </div>
+                <h3>Microsoft Office</h3>
+                <p>
+                    Manejo de herramientas del paquete Microsoft Office,
+                    incluyendo Word, Excel y PowerPoint para la creación
+                    de documentos, planillas de cálculo, gráficos,
+                    tablas dinámicas y presentaciones profesionales.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- Análisis de Datos -->
+            <div class="skill-card">
+                <div class="skill-icon analytics">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3>Análisis de Datos</h3>
+                <p>
+                    Análisis, organización e interpretación de datos
+                    mediante hojas de cálculo, consultas SQL y
+                    herramientas de visualización para apoyar la
+                    toma de decisiones.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+
+            <!-- Git y GitHub -->
+            <div class="skill-card">
+                <div class="skill-icon git">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <h3>Git & GitHub</h3>
+                <p>
+                    Control de versiones mediante Git y gestión
+                    de repositorios en GitHub para el desarrollo
+                    colaborativo, seguimiento de cambios y
+                    publicación de proyectos.
+                </p>
+                <span class="skill-level">
+                    Básico
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================================-->
+<!-- HABILIDADES PERSONALES -->
+<!--==================================================-->
+<section class="soft-skills section" id="soft-skills">
+    <div class="container">
+        <!--========================-->
+        <!-- TÍTULO -->
+        <!--========================-->
+        <div class="section-title">
+            <span>Competencias</span>
+            <h2>Habilidades Personales</h2>
+            <p>
+                Además de los conocimientos técnicos,
+                considero fundamentales las habilidades
+                interpersonales para trabajar en equipo
+                y desarrollarse profesionalmente.
+            </p>
+        </div>
+
+        <!--========================-->
+        <!-- CARRUSEL -->
+        <!--========================-->
+
+        <div class="swiper softSwiper">
+            <div class="swiper-wrapper">
+                <!--========================-->
+                <!-- Trabajo en Equipo -->
+                <!--========================-->
+                <div class="swiper-slide">
+                    <div class="soft-card">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Trabajo en Equipo</h3>
+                        <p>
+                            Me adapto fácilmente a grupos de trabajo y disfruto colaborar para alcanzar objetivos comunes.
+                        </p>
+                    </div>
+                </div>
+
+                <!--========================-->
+                <!-- Comunicación -->
+                <!--========================-->
+                <div class="swiper-slide">
+                    <div class="soft-card">
+                        <i class="fa-solid fa-comments"></i>
+                        <h3>Comunicación</h3>
+                        <p>
+                            Buena comunicación con compañeros, clientes y profesores.
+                        </p>
+                    </div>
+                </div>
+
+                <!--========================-->
+                <!-- Resolución de Problemas -->
+                <!--========================-->
+                <div class="swiper-slide">
+
+                    <div class="soft-card">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <h3>Resolución de Problemas</h3>
+
+                        <p>
+                            Analizo distintas alternativas hasta encontrar la mejor solución.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!--========================-->
+                <!-- Aprendizaje -->
+                <!--========================-->
+                <div class="swiper-slide">
+
+                    <div class="soft-card">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                        <h3>Aprendizaje Constante</h3>
+
+                        <p>
+                            Siempre busco aprender nuevas tecnologías y mejorar mis conocimientos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!--========================-->
+                <!-- Organización -->
+                <!--========================-->
+                <div class="swiper-slide">
+
+                    <div class="soft-card">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        <h3>Organización</h3>
+
+                        <p>
+                            Planificación y organización de tareas para cumplir objetivos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!--========================-->
+                <!-- Responsabilidad -->
+                <!--========================-->
+                <div class="swiper-slide">
+
+                    <div class="soft-card">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <h3>Responsabilidad</h3>
+
+                        <p>
+                            Compromiso con el trabajo, puntualidad y cumplimiento de plazos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!--========================-->
+                <!-- Proactividad -->
+                <!--========================-->
+                <div class="swiper-slide">
+
+                    <div class="soft-card">
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                        <h3>Proactividad</h3>
+
+                        <p>
+                            Me gusta proponer ideas, investigar y tomar la iniciativa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!--========================-->
+                <!-- Pensamiento Analítico -->
+                <!--========================-->
+                <div class="swiper-slide">
+
+                    <div class="soft-card">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                        <h3>Pensamiento Analítico</h3>
+
+                        <p>
+                            Capacidad para comprender problemas complejos y resolverlos de manera lógica.
+                        </p>
+
+                    </div>
+
+                </div>
                 
-                Como vendedor desarrollé funciones de atención al cliente y
-                presentación de productos en el área de ventas de indumentaria.
-                A su vez, asumí la responsabilidad del manejo de caja y registro
-                de transacciones durante mi jornada laboral. Mi enfoque se
-                centró en proporcionar un servicio al cliente de calidad,
-                destacando la importancia de la atención personalizada y la
-                satisfacción del cliente.
-              </p>
-              <p>
-                Desempeñé un papel multifacético como vendedor de ropa,
-                incluyendo la creación de contenido para publicar artículos de
-                moda en nuestras redes sociales. Utilicé mi creatividad y
-                conocimiento de las tendencias para presentar nuestros productos
-                de manera atractiva, generando interés y participación por parte
-                de los seguidores de la marca.
-              </p>
-              <div class="conectord">
-                <div class="circulod"></div>
-              </div>
             </div>
 
-            <div class="item der">
-              <span>
-                <div class="descargarCV">
-                  <a href="archivosPDF/CV Pablo Laura.pdf" class="boton-descarga" download="CV Pablo Laura.pdf">
-                      <i class="fas fa-download icono-descarga"></i> Descargar CV Tradicional
-                  </a>
-                </div>  
-                <div class="conectord">
-                  <div class="circulod"></div>
-                </div>            
-              </span>
-              
+            <!--========================-->
+            <!-- PAGINACIÓN -->
+            <!--========================-->
+
+            <div class="swiper-pagination"></div>
+
+            <!--========================-->
+            <!-- FLECHAS -->
+            <!--========================-->
+
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================================-->
+<!-- FIN PARTE 2B.1 -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- IDIOMA -->
+<!--==================================================-->
+<section class="languages section" id="languages">
+    <div class="container">
+        <div class="section-title">
+            <span>Idiomas</span>
+            <h2>Idiomas</h2>
+            <p>
+                Idiomas utilizados para la comunicación y el aprendizaje continuo.
+            </p>
+        </div>
+
+        <div class="languages-grid">
+            <!-- Español -->
+            <div class="language-card">
+                <div class="language-top">
+                    <h3>Español</h3>
+                    <span class="language-level native">
+                        Nativo
+                    </span>
+                </div>
+                <p class="language-description">
+                    Idioma nativo con dominio completo en comprensión,
+                    comunicación oral y escrita.
+                </p>
             </div>
 
-          </div>
+            <!-- Inglés -->
+            <div class="language-card">
+                <div class="language-top">
+                    <h3>Inglés</h3>
+                    <span class="language-level a2">
+                        A2 - Básico
+                    </span>
+                </div>
+
+                <p class="language-description">
+                    Lectura de documentación técnica,
+                    comprensión de tutoriales y aprendizaje continuo.
+                </p>
+            </div>
+
         </div>
-      </div>
-    </section>
 
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-      <div class="contenido-seccion">
-        <h2>PORTFOLIO</h2>
-        <div class="galeria">
-          <div class="proyecto" >
-            <a href="https://github.com/Pablis-246/Bloc-Notas" target="_blank">         
-                <img src="img/proyecto1.jpg" alt="" />
-                <div class="overlay">
-                <h3><i>App Bloc de Notas</i></h3>
-                <p class="descripcion">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Similique, qui neque. Dolorum ipsam maiores, natus obcaecati
-                    rerum iure voluptate possimus eius non, vel quibusdam impedit
-                    incidunt placeat hic praesentium eligendi!
-                </p>
-                </div>
-            </a>
-          </div>
-          <div class="proyecto">
-            <a href="https://github.com/Pablis-246/APES" target="_blank">
-                <img src="img/proyecto2.jpg" alt="" />
-                <div class="overlay">
-                <h3><i>Software APES</i></h3>
-                <p class="descripcion">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Similique, qui neque. Dolorum ipsam maiores, natus obcaecati
-                    rerum iure voluptate possimus eius non, vel quibusdam impedit
-                    incidunt placeat hic praesentium eligendi!
-                </p>
-                </div>
-            </a>   
-                
-          </div>
-          <div class="proyecto">
-            <a href="https://github.com/Pablis-246/Juego-Speed-Odyssey" target="_blank">
-                <img src="img/proyecto3.jpg" alt="" />
-                <div class="overlay">
-                <h3><i>Juego Speed Odyssey</i></h3>
-                <p class="descripcion">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Similique, qui neque. Dolorum ipsam maiores, natus obcaecati
-                    rerum iure voluptate possimus eius non, vel quibusdam impedit
-                    incidunt placeat hic praesentium eligendi!
-                </p>
-                </div>
-            </a>
-          </div>
+    </div>
+
+</section>
+
+<!--==================================================-->
+<!-- EDUCACIÓN -->
+<!--==================================================-->
+<section class="education section" id="education">
+    <div class="container">
+        <div class="section-title">
+            <span>Formación Académica</span>
+            <h2>Educación</h2>
+            <p>
+                Mi formación académica y los estudios que me han permitido
+                desarrollar conocimientos en programación, desarrollo web
+                y tecnologías de la información.
+
+            </p>
         </div>
-      </div>
-    </section>
+
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-title">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <div>
+                            <h3>Licenciatura en Analisis Sistemas</h3>
+                            <div class="education-info">
+                                <span class="education-place">
+                                    Universidad de Buenos Aires (UBA)
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="education-date">
+                                    2024 - Actualidad
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="assets/pdf/plan-estudios.pdf"class="btn-small"target="_blank">
+                        <i class="fa-solid fa-download"></i>
+                        Plan de Estudios
+                    </a>    
+                </div>
+            </div>
+
+            <!--===========================================-->
+            <!-- ESCUELA TECNICA -->
+            <!--===========================================-->
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-title">
+                        <i class="fa-solid fa-school"></i>
+                        <div>
+                            <h3>Técnico en Computación</h3>
+                            <div class="education-info">
+                                <span class="education-place">
+                                    Escuela Técnica N°35 D.E. 18
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="education-date">
+                                    2018 - 2023
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="assets/pdf/titulo-tecnico.pdf"class="btn-small"target="_blank">
+                        <i class="fa-solid fa-download"></i>
+                        Descargar Analítico
+                    </a>
+                </div>
 
 
-    <!-- footer -->
-      
-    <footer>
-      <h3>Copyrigth (C) 2023 Pablo Laura</h3>
-    </footer>
-    <!-- Flecha hacia arriba -->
-    <div class="flecha" onclick="scrollToTop()">
-      <i class="fas fa-arrow-up"></i>
-  </div>
-    <script src="script.js"></script>
-  </body>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================================-->
+<!-- CURSOS -->
+<!--==================================================-->
+<section class="courses section" id="courses">
+    <div class="container">
+        <div class="section-title">
+            <span>Capacitación</span>
+            <h2>Cursos y Certificaciones</h2>
+            <p>
+                Formación complementaria orientada al desarrollo web,
+                programación y tecnologías de la información.
+            </p>
+        </div>
+
+        <div class="courses-grid">
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <h3>Desarrollo Web Nivel I</h3>
+                            <div class="course-info">
+                                <span class="course-place">
+                                    Universidad Tecnológica Nacional - Aprende Programando
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="course-date">
+                                    2021
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="assets/pdf//Certificado de Desarollo Web I. LAURA  PABLO.pdf" class="btn-small" target="_blank">
+                        <i class="fa-solid fa-download"></i>
+                        Descargar Certificado
+                    </a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <h3>Desarrollo Web Nivel II</h3>
+                            <div class="course-info">
+                                <span class="course-place">
+                                    Universidad Tecnológica Nacional - Aprende Programando
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="course-date">
+                                    2022
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="assets/pdf/Certificado de Desarollo Web II. LAURA  PABLO.pdf" class="btn-small" target="_blank">
+                        <i class="fa-solid fa-download"></i>
+                        Descargar Certificado
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <div>
+                            <h3>Análisis de Datos con Python</h3>
+                            <div class="course-info">
+                                <span class="course-place">
+                                    GCBA - Talento Tech
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="course-date">
+                                    2026
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="assets/pdf/Data_Analytics_con_Python.pdf" class="btn-small" target="_blank">
+                        <i class="fa-solid fa-download"></i>
+                        Descargar Certificado
+                    </a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <i class="fa-solid fa-list-check"></i>
+                        <div>
+                            <h3>Testing QA</h3>
+                            <div class="course-info">
+                                <span class="course-place">
+                                    GCBA - Talento Tech
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="course-date">
+                                    2026 - En progreso
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-small">
+                        <i class="fa-solid fa-clock"></i>
+                        En progreso
+                    </a>
+
+                    
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <i class="fa-solid fa-file-excel"></i>
+                        <div>
+                            <h3>Semana Excel</h3>
+                            <div class="course-info">
+                                <span class="course-place">
+                                    Hashtag - Curso 8 horas
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="course-date">
+                                    2026
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="assets/pdf/certificado-excel-oli-hashtag.pdf" class="btn-small" target="_blank">
+                        <i class="fa-solid fa-download"></i>
+                        Descargar Certificado
+                    </a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <i class="fa-solid fa-file-excel"></i>
+                        <div>
+                            <h3>Excel de Cero a Intermedio</h3>
+                            <div class="course-info">
+                                <span class="course-place">
+                                    Formación Personal - Curso Youtube
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="course-date">
+                                    2026 - En progreso
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                       class="btn-small">
+                        <i class="fa-solid fa-clock"></i>
+                        En progreso
+                    </a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <i class="fa-solid fa-database"></i>
+                        <div>
+                            <h3>SQL y Bases de Datos</h3>
+                            <div class="course-info">
+                                <span class="course-place">
+                                    Formación Personal - Curso Youtube
+                                </span>
+                                <span class="separator">|</span>
+                                <span class="course-date">
+                                    2026 - En progreso
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                       class="btn-small">
+                        <i class="fa-solid fa-clock"></i>
+                        En progreso
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+<!--==================================================-->
+<!-- CONOCIMIENTOS ADQUIRIDOS -->
+<!--==================================================-->
+<section class="knowledge section" id="knowledge">
+    <div class="container">
+        <div class="section-title">
+            <span>Mi experiencia académica</span>
+            <h2>Conocimientos Adquiridos</h2>
+            <p>
+                A lo largo de mi formación académica y cursos de capacitación
+                fui incorporando conocimientos teóricos y prácticos en distintas
+                áreas de la informática y el desarrollo de software.
+            </p>
+        </div>
+
+        <!-- ESCUELA TECNICA -->
+        <div class="knowledge-card accordion-card">
+            <div class="knowledge-header">
+                <h3>
+                    <i class="fa-solid fa-school"></i>
+                    Escuela Técnica N°35 D.E.18
+                </h3>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="knowledge-body">
+                <p>
+                    Durante mi formación secundaria adquirí conocimientos en desarrollo web, bases de datos y programación. Aprendí a utilizar HTML y CSS para el diseño de páginas web estáticas, comprendiendo la estructura, estilos y organización de interfaces. Además, incorporé conceptos básicos de programación en lenguajes como JavaScript, C++ y Assembler, lo que me permitió desarrollar el pensamiento lógico y la resolución de problemas.
+                </p>
+
+                <p>
+                    En quinto año profundicé en bases de datos, aprendiendo conceptos fundamentales como claves primarias y foráneas, modelado de datos y normalización. También trabajé con SQL, realizando consultas para la manipulación, administración y recuperación de información. Utilizamos Microsoft Visual Studio para desarrollar aplicaciones simples, integrando bases de datos con interfaces funcionales.
+                </p>
+
+                <p>
+                    Como proyecto integrador, desarrollé junto a un equipo un sistema de control de stock para un local de ropa. En este proyecto aplicamos modelado de base de datos en función de los requerimientos del cliente, incluyendo gestión de productos, control de inventario, emisión de facturas y remitos. Implementamos la aplicación en Visual Studio, conectándola con la base de datos mediante consultas SQL, logrando una integración entre la lógica del sistema y la persistencia de datos. Además, elaboramos una guía de usuario para facilitar la utilización del software.
+                </p>
+
+                <p>
+                    En sexto año incorporé conocimientos en Java, abordando desde conceptos básicos hasta Programación Orientada a Objetos (POO), interfaces y manejo de hilos. Trabajé en el entorno de desarrollo Eclipse y utilicé LibGDX, un framework para el desarrollo de videojuegos multiplataforma.
+                </p>
+
+                <p>
+                    Como proyecto final, desarrollé junto a un equipo un videojuego multijugador en red. Este proyecto implicó la integración de múltiples tecnologías y herramientas, así como el aprendizaje autónomo para resolver problemas técnicos no vistos en clase. A pesar de las dificultades, logramos completar el proyecto, destacando la capacidad de trabajo en equipo, la perseverancia y la búsqueda de soluciones mediante investigación y aprendizaje continuo.
+                </p>
+            </div>
+        </div>
+
+        <div class="knowledge-card accordion-card">
+            <div class="knowledge-header">
+                <h3>
+                    <i class="fa-solid fa-building-columns"></i>
+                    Carrera de Licenciatura en Analisis de Sistemas
+                </h3>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="knowledge-body">
+                <p>
+
+                </p>
+            </div>
+        </div>
+        
+
+        <!-- UTN -->
+        <div class="knowledge-card accordion-card">
+            <div class="knowledge-header">
+                <h3>
+                    <i class="fa-solid fa-code"></i>
+                    Desarrollo Web I y II
+                </h3>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="knowledge-body">
+                <p>
+
+                </p>
+            </div>
+        </div>
+
+        <!-- TALENTO TECH -->
+        <div class="knowledge-card accordion-card">
+            <div class="knowledge-header">
+                <h3>
+                    <i class="fa-solid fa-chart-column"></i>
+                    Análisis de Datos
+                </h3>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="knowledge-body">
+                <p>
+
+                </p>
+            </div>
+        </div>
+
+        <div class="knowledge-card accordion-card">
+            <div class="knowledge-header">
+                <h3>
+                    <i class="fa-solid fa-list-check"></i>
+                    Testing QA
+                </h3>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="knowledge-body">
+                <p>
+
+                </p>
+            </div>
+        </div>
+
+        <div class="knowledge-card accordion-card">
+            <div class="knowledge-header">
+                <h3>
+                    <i class="fa-solid fa-file-excel"></i>
+                    Excel de Cero a Intermedio
+                </h3>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="knowledge-body">
+                <p>
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--==================================================-->
+<!-- EXPERIENCIA -->
+<!--==================================================-->
+<section class="experience section" id="experience">
+    <div class="container">
+        <div class="section-title">
+            <span>Mi recorrido</span>
+            <h2>Experiencia</h2>
+            <p>
+                Aunque actualmente me encuentro buscando mi primera experiencia profesional
+                en el área IT, he desarrollado distintos proyectos personales, académicos
+                y actividades que me permitieron adquirir conocimientos y habilidades.
+            </p>
+        </div>
+
+        <div class="experience-grid">
+
+            <article class="experience-card featured">
+                <div class="experience-header">
+                    <!-- FOTO EMPRESA -->
+                    <div class="experience-logo">
+                        <img src="assets/img/empresa-pablis.jpg"alt="">
+                    </div>
+                    <!-- INFORMACIÓN -->
+                    <div class="experience-info">
+                        <h3>Creaciones Pablis</h3>
+                        <div class="experience-data">
+                            <span class="experience-place">
+                                Bogotá 3168, Flores, CABA
+                            </span>
+                            <span class="separator">|</span>
+                            <span class="experience-date">
+                                2024 - Actualidad
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>
+                    Vendedor • Control de Stock • Manejo de Caja • Atención al Cliente
+                </h4>
+
+                <p>
+                    Como vendedor desarrollé funciones de atención al cliente y presentación de productos en el área de ventas de indumentaria. A su vez, asumí la responsabilidad del manejo de caja y registro de transacciones durante mi jornada laboral. Mi enfoque se centró en proporcionar un servicio al cliente de calidad, destacando la importancia de la atención personalizada y la satisfacción del cliente.
+                </p>
+
+                <p>
+                    Desempeñé un papel multifacético como vendedor de ropa, incluyendo la creación de contenido para publicar artículos de moda en nuestras redes sociales. Utilicé mi creatividad y conocimiento de las tendencias para presentar nuestros productos de manera atractiva, generando interés y participación por parte de los seguidores de la marca.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum corrupti tenetur minima at eum praesentium iste vel in quas labore, perferendis incidunt. Non quas quo odio. Repellat, tempora quisquam! Impedit.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================================-->
+<!-- PROYECTOS -->
+<!--==================================================-->
+<section class="projects section" id="projects">
+    <div class="container">
+        <div class="section-title">
+            <span>Portfolio</span>
+            <h2>Mis Proyectos</h2>
+            <p>
+                Algunos proyectos personales, académicos y prácticas
+                desarrolladas durante mi formación.
+            </p>
+        </div>
+
+        <!--==================================================-->
+        <!-- CARRUSEL -->
+        <!--==================================================-->
+        <div class="projects-carousel">
+            <!-- BOTON IZQUIERDO -->
+            <button class="slider-btn prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!--======================================-->
+            <!-- SLIDER -->
+            <!--======================================-->
+            <div class="projects-slider">
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Sistema de Control de Stock</h3>
+                        <span class="project-year">
+                            2023
+                        </span>
+                        <p>
+                            Sistema desarrollado para administrar
+                            productos, ventas, facturación,
+                            remitos y control de inventario
+                            para un comercio de indumentaria.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>C#</span>
+                            <span>SQL</span>
+                            <span>Visual Studio</span>
+                        </div>
+
+                        <a href="#" class="project-btn">
+                            <i class="fa-brands fa-github"></i>
+                            Ver Repositorio
+                        </a>
+                    </div>
+                </article>
+
+                <!--========================-->
+                <!-- PROYECTO 2 -->
+                <!--========================-->
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Videojuego Multijugador</h3>
+                        <span class="project-year">
+                            2023
+                        </span>
+                        <p>
+                            Proyecto final desarrollado
+                            utilizando Java y LibGDX,
+                            implementando comunicación
+                            entre múltiples jugadores.
+                        </p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>LibGDX</span>
+                            <span>POO</span>
+                        </div>
+                        <a href="#" class="project-btn">
+                            <i class="fa-brands fa-github"></i>
+                            Ver Repositorio
+                        </a>
+                    </div>
+                </article>
+
+                <!--========================-->
+                <!-- PROYECTO 3 -->
+                <!--========================-->
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3> Portfolio Web</h3>
+                        <span class="project-year">
+                            2026
+                        </span>
+                        <p>
+                            Sitio web responsive para presentar
+                            mi perfil profesional,
+                            conocimientos y proyectos.
+                        </p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a href="#" class="project-btn">
+                            <i class="fa-brands fa-github"></i>
+                            Ver Repositorio
+                        </a>
+                    </div>
+                </article>
+
+                <!--========================-->
+                <!-- PROYECTO 4 -->
+                <!--========================-->
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Modelado de Base de Datos </h3>
+                        <span class="project-year">
+                            PROXIMAMENTE
+                        </span>
+                        <p>
+                            Diseño y normalización
+                            de una base de datos
+                            para la administración
+                            de un comercio.
+                        </p>
+                        <div class="project-tags">
+                            <span>SQL</span>
+                            <span>MySQL</span>
+                            <span>XAMPP</span>
+                        </div>
+
+                        <a href="#" class="project-btn">
+                            <i class="fa-brands fa-github"></i>
+                            EN PROCESO
+                        </a>
+                    </div>
+                </article>
+
+                <!--========================-->
+                <!-- PROYECTO 4 -->
+                <!--========================-->
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>PROYECTO 5</h3>
+                        <span class="project-year">
+                            PROXIMAMENTE
+                        </span>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio libero similique mollitia cupiditate, quam dicta iure ab voluptas qui explicabo voluptatum alias repudiandae nam? Saepe eveniet error voluptatibus tempore corrupti?
+                        </p>
+
+                        <div class="project-tags">
+                            <span>SQL</span>
+                            <span>MySQL</span>
+                            <span>XAMPP</span>
+                        </div>
+
+                        <a href="#" class="project-btn">
+                            <i class="fa-brands fa-github"></i>
+                            EN PROCESO
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- BOTON DERECHO -->
+            <button class="slider-btn next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!--===========================-->
+            <!-- INDICADORES -->
+            <!--===========================-->
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        
+    </div>
+
+</section>
+
+
+<!--==================================================-->
+<!-- ¿POR QUÉ CONTRATARME? -->
+<!--==================================================-->
+<section class="hire section">
+    <div class="container">
+        <div class="section-title">
+            <span>Perfil Profesional</span>
+            <h2>Preguntas de Entrevista de Trabajo</h2>
+        </div>
+
+        <div class="hire-grid">
+            <div class="hire-card">
+                <h3>¿Porque deberiamos contratarte?</h3>
+                <p>
+                    Considero que puedo aportar mucho al equipo por mi actitud proactiva y mi resiliencia. Frente a un problema, no me quedo en la queja, sino que me enfoco en buscar alternativas viables de manera rápida y eficiente. Me motiva superar desafíos, asumir responsabilidades y colaborar para que los proyectos salgan adelante con éxito.
+                </p>
+            </div>
+
+            <div class="hire-card">
+                <h3>¿Cuál es tu mayor fortaleza y cuál tu mayor debilidad?</h3>
+                <p>
+                    <strong>Fortaleza:</strong> Mi mayor fortaleza es la proactividad y la orientación a soluciones. No me quedo esperando a que me asignen tareas o a que los problemas se resuelvan solos; cuando detecto un obstáculo o una oportunidad de mejora, tomo la iniciativa para investigar, proponer y ejecutar soluciones eficientes.</p>
+                <p>
+                    <strong>Debilidad:</strong> Un área en la que estoy trabajando es la comunicación de mis ideas cuando son muy técnicas o complejas. A veces me cuesta sintetizarlas de forma sencilla a la primera. Para mejorarlo, me tomo un momento antes de hablar o presentar para estructurar los puntos clave y aseguro pedir retroalimentación para confirmar que el mensaje haya quedado claro.
+                </p>
+            </div>
+
+             <div class="hire-card">
+                <h3>¿Cómo manejás una situación donde te trabás con un problema técnico o un bug?</h3>
+                <p>
+                    Ante un problema técnico o un bug, aplico un enfoque estructurado. Primero, aíslo e identifico la causa raíz del error en lugar de quedarme con el síntoma visible. A partir de ahí, investigo las posibles causas, consulto documentación técnica o pruebas previas y planteo diferentes vías de solución. Si tras evaluar las alternativas el problema persiste o compromete los tiempos de entrega, busco apoyo en el equipo o realizo una consulta técnica para resolverlo de la forma más rápida y eficiente posible
+                </p>
+            </div>
+
+             <div class="hire-card">
+                <h3>¿Dónde te ves en 3 a 5 años?</h3>
+                <p>
+                    En 3 a 5 años me veo graduado de mi carrera universitaria y consolidado profesionalmente en mi área de estudio. Mi meta es haber acumulado una sólida experiencia práctica, asumiendo responsabilidades de mayor impacto y continuando con mi formación continua. Me interesa crecer dentro de una organización donde pueda aplicar todo el conocimiento adquirido en la facultad, aportar al desarrollo de proyectos clave y seguir evolucionando profesionalmente.
+                </p>
+            </div>
+
+             <div class="hire-card">
+                <h3>¿Cómo reaccionás si tenés que trabajar con una tecnología que no conocés?</h3>
+                <p>
+                    Lo asumo como una excelente oportunidad de aprendizaje. Mi primer paso es abordar la documentación oficial para entender la arquitectura y las buenas prácticas de la tecnología. En paralelo, recurro a recursos como tutoriales o cursos de forma autodidacta para llevar rápidamente la teoría a la práctica. Además, no dudo en consultar al equipo para alinear criterios, resolver dudas puntuales y acelerar la curva de aprendizaje para ser productivo en el menor tiempo posible.
+                </p>
+            </div>
+
+
+            <div class="hire-card">
+                <h3>¿Cómo priorizás tus tareas cuando tenés varias entregas pendientes?</h3>
+                <p>
+                    Priorizo mis tareas utilizando una matriz de urgencia e impacto. Primero identifico cuáles son las entregas críticas con plazos inmediatos para abordarlas de forma prioritaria. Luego, organizo el resto del trabajo descomponiendo los proyectos grandes en tareas más pequeñas y gestionables, asignándoles un orden de ejecución lógico. Si surgen imprevistos o solicitudes en simultáneo, evalúo su nivel de urgencia real junto al equipo o mi responsable para reajustar prioridades sin descuidar la calidad de las entregas.
+                </p>
+            </div>
+
+            <div class="hire-card">
+                <h3>¿Preferís trabajar solo o en equipo?</h3>
+                <p>
+                    Disfruto mucho el trabajo en equipo porque considero que el intercambio de ideas y el debate siempre enriquecen la solución a cualquier problema. Por otro lado, cuando me toca trabajar de forma individual, me resulta muy sencillo organizarme y ser autosuficiente, ya que manejo con claridad mis propios tiempos y entregas. Creo que ambas modalidades tienen su valor y me adapto muy bien a la que requiera cada proyecto, buscando aportar mi parte para que todo funcione de manera coordinada.
+                </p>
+            </div>
+
+            <div class="hire-card">
+                <h3>¿Cómo te integrás a un equipo de trabajo que ya tiene sus dinámicas y normas consolidadas?</h3>
+                <p>
+                    Mi enfoque es entrar con la cabeza abierta, observando y escuchando para entender cómo colaboran, cuáles son las dinámicas que ya les funcionan y qué herramientas utilizan. En lugar de imponer mis ideas de entrada, busco adaptarme a su flujo de trabajo y comprender la cultura del equipo. Una vez que estoy integrado y aportando en el día a día, si detecto alguna oportunidad de mejora la propongo de manera constructiva, buscando siempre sumar a lo que ya construyeron.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta section">
+    <div class="container">
+        <div class="cta-box">
+            
+            <!-- COLUMNA IZQUIERDA (Texto apilado) -->
+            <div class="cta-text">
+                <h2>¿Te interesa mi perfil?</h2>
+                <p>Puedes descargar mi currículum</p>
+            </div>
+
+            <!-- COLUMNA DERECHA (Botón) -->
+            <div class="cta-buttons">
+                <a href="assets/pdf/CvPabloLaura2026.pdf" download class="btn btn-primary">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    Descargar CV
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--==================================================-->
+<!-- CONTACTO -->
+<!--==================================================-->
+<section class="contact section" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <span>Contacto</span>
+            <h2>¡Hablemos!</h2>
+            <p>
+                Estoy en búsqueda de mi primera oportunidad profesional
+                en el área IT. Si deseas comunicarte conmigo para una
+                entrevista, una propuesta laboral o simplemente realizar
+                una consulta, puedes hacerlo mediante los siguientes medios
+                o completando el formulario.
+            </p>
+        </div>
+
+        <!--=====================================-->
+        <!-- CONTENEDOR -->
+        <!--=====================================-->
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3> Información de contacto</h3>
+                <p>
+                    Puedes comunicarte conmigo a través de cualquiera
+                    de estos medios. Responderé a la brevedad.
+                </p>
+                <div class="contact-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <span>+54 9 11 6608-6493</span>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <span>pablolauracalle@gmail.com</span>
+                    </div>
+                    <!-- Enlace invisible que cubre toda la tarjeta -->
+                    <a href="https://mail.google.com/" class="card-link" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+                <div class="contact-card">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <span>linkedin.com/in/pablo-agustin-laura-calle-2279b8401/</span>
+                    </div>
+                    <!-- Enlace invisible que cubre toda la tarjeta -->
+                    <a href="https://www.linkedin.com/in/pablo-agustin-laura-calle-2279b8401/" class="card-link" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+                <div class="contact-card">
+                    <i class="fa-brands fa-github"></i>
+                    <div>
+                        <h4>GitHub</h4>
+                        <span>github.com/Pablis-246</span>
+                    </div>
+                    <!-- Enlace invisible que cubre toda la tarjeta -->
+                    <a href="https://github.com/Pablis-246" class="card-link" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+                <div class="availability-card">
+                    <div class="availability-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Disponible para trabajar
+                    </div>
+                    <p>
+                        ✔ Part Time<br>
+                        ✔ Presencial<br>
+                        ✔ Remoto<br>
+                        ✔ Híbrido
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Envíame un mensaje <small>(Proximamente en funcionamiento)</small> </h3>
+                <form>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Ingresa tu nombre" required>
+                        </div>
+                        <div class="input-group">
+                            <label> Apellido</label>
+                            <input type="text" placeholder="Ingresa tu apellido" required>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label> Empresa </label>
+                            <input type="text" placeholder="Empresa (Opcional)">
+                        </div>
+                        <div class="input-group">
+                            <label> Correo Electrónico</label>
+                            <input type="email" placeholder="correo@ejemplo.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label> Asunto  </label>
+                        <input type="text" placeholder="Asunto del mensaje" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label> Mensaje </label>
+                        <textarea rows="8" placeholder="Escribe aquí tu mensaje..." required> </textarea>
+                    </div>
+
+                    <!-- CONTENEDOR DEL BOTÓN Y LA ALERTA -->
+                    <div class="btn-wrapper">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Enviar Mensaje
+                        </button>
+                        <!-- ALERTA AL LADO DEL BOTÓN -->
+                        <div id="toast-alert" class="toast-alert">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>¡Mensaje enviado con éxito!</span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!--==================================================-->
+<!-- FOOTER -->
+<!--==================================================-->
+
+<footer class="footer">
+    <div class="container">
+        
+        <!-- SECCIÓN INFERIOR (TUS DATOS ACTUALES) -->
+        <div class="footer-bottom">
+            <p>© 2026 Pablo Laura. Todos los derechos reservados.</p>
+            <p>Diseñado y desarrollado usando HTML, CSS y JavaScript.</p>
+        </div>
+    </div>
+</footer>
+<!--==================================================-->
+<!-- SCRIPT -->
+<!--==================================================-->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
 </html>

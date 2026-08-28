@@ -1,4 +1,4 @@
 # CV
-Curriculum Vitae de Pablo Laura (2026)
+Curriculum Vitae de Pablo Laura (2023)
 
 https://pablis-246.github.io/CV/
